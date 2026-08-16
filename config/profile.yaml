@@ -1,0 +1,50 @@
+candidate:
+  experience_years: 16
+  primary_skills:
+    - Oracle PL/SQL
+    - Snowflake
+    - Informatica PowerCenter
+    - ETL
+    - Data Warehousing
+  secondary_skills:
+    - Control-M
+    - Oracle
+    - SQL
+    - AWS
+    - Python
+    - Microsoft Fabric
+    - Airflow
+    - Informatica IDMC
+    - IICS
+    - Unix
+    - Data Migration
+    - Performance Tuning
+
+location:
+  current_country: India
+  remote_required: true
+  remote_from_india: true
+  preferred:
+    - India
+    - Dubai
+    - UAE
+    - Worldwide
+    - UK
+    - Europe
+    - USA
+    - Canada
+    - Australia
+
+salary:
+  minimum_inr_lpa: 40
+  preferred_inr_lpa: 50
+  preferred_usd_yearly: 80000
+  preferred_aed_monthly: 25000
+
+job_age:
+  preferred_hours: 24
+  maximum_days: 7
+
+matching:
+  minimum_score: 70
+  preferred_score: 80
