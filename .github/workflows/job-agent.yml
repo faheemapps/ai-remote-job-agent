@@ -54,11 +54,11 @@ jobs:
           git config user.name "AI Job Agent"
           git config user.email "actions@github.com"
 
-          git add data/jobs.db
+          git add -f data/jobs.db
 
           if git diff --cached --quiet; then
             echo "No database changes to commit."
           else
             git commit -m "Update job database"
-            git push
+            git push origin HEAD:${{ github.ref_name }}
           fi
