@@ -64,6 +64,4 @@ jobs:
           else
             echo "No database file yet — no jobs matched this run's filters."
           fi
-          else
-            echo "No database file yet — no jobs matched this run's filters."
-          fi
+         
