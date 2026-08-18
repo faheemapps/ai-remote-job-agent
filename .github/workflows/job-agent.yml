@@ -47,8 +47,7 @@ jobs:
           REPORT_EMAIL: ${{ secrets.REPORT_EMAIL }}
         run: |
           python -m app.main
-
-           # 5. Save job database
+      # 5. Save job database
       - name: Commit database
         run: |
           git config user.name "AI Job Agent"
@@ -62,6 +61,9 @@ jobs:
               git commit -m "Update job database"
               git push origin HEAD:${{ github.ref_name }}
             fi
+          else
+            echo "No database file yet — no jobs matched this run's filters."
+          fi
           else
             echo "No database file yet — no jobs matched this run's filters."
           fi
