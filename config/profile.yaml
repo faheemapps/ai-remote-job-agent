@@ -1,5 +1,5 @@
 candidate:
-  experience_years: 16
+  experience_years: 10
   primary_skills:
     - Oracle PL/SQL
     - Snowflake
@@ -42,9 +42,9 @@ salary:
   preferred_aed_monthly: 25000
 
 job_age:
-  preferred_hours: 24
+  preferred_hours: 72
   maximum_days: 7
 
 matching:
-  minimum_score: 70
-  preferred_score: 80
+  minimum_score: 10
+  preferred_score: 60
