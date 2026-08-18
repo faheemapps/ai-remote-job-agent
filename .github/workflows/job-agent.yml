@@ -48,17 +48,20 @@ jobs:
         run: |
           python -m app.main
 
-      # 5. Save job database
+           # 5. Save job database
       - name: Commit database
         run: |
           git config user.name "AI Job Agent"
           git config user.email "actions@github.com"
 
-          git add -f data/jobs.db
-
-          if git diff --cached --quiet; then
-            echo "No database changes to commit."
+          if [ -f data/jobs.db ]; then
+            git add -f data/jobs.db
+            if git diff --cached --quiet; then
+              echo "No database changes to commit."
+            else
+              git commit -m "Update job database"
+              git push origin HEAD:${{ github.ref_name }}
+            fi
           else
-            git commit -m "Update job database"
-            git push origin HEAD:${{ github.ref_name }}
+            echo "No database file yet — no jobs matched this run's filters."
           fi
