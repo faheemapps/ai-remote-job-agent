@@ -35,6 +35,8 @@ def main():
         if j.remote_from_india is False:
             continue
         result = score(j, PROFILE)
+        if not result["remote"]:
+            continue
         if result["score"] < PROFILE["matching"]["minimum_score"]:
             continue
         save(j, result["score"])
