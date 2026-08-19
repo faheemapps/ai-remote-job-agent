@@ -45,6 +45,7 @@ jobs:
           SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
           SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
           REPORT_EMAIL: ${{ secrets.REPORT_EMAIL }}
+          JOOBLE_API_KEY: ${{ secrets.JOOBLE_API_KEY }}
         run: |
           python -m app.main
       # 5. Save job database
