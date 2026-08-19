@@ -3,7 +3,7 @@ from .sources.rss import collect_rss
 from .sources.google_news import collect_google_news
 from .sources.company_sites import collect_company_pages
 from .sources.free_apis import collect_free_apis
-from .sources.jooble import fetch_jooble
+from .sources.Jooble import fetch_jooble
 from .agent.matcher import score, within_days
 from .agent.verifier import verify
 from .database import save
