@@ -5,11 +5,6 @@ on:
 
   schedule:
     - cron: "17 1 * * *"
-      timezone: "Asia/Kolkata"
-    - cron: "17 7 * * *"
-      timezone: "Asia/Kolkata"
-    - cron: "17 13 * * *"
-      timezone: "Asia/Kolkata"
 
 permissions:
   contents: write
@@ -48,6 +43,7 @@ jobs:
           JOOBLE_API_KEY: ${{ secrets.JOOBLE_API_KEY }}
         run: |
           python -m app.main
+
       # 5. Save job database
       - name: Commit database
         run: |
@@ -56,6 +52,7 @@ jobs:
 
           if [ -f data/jobs.db ]; then
             git add -f data/jobs.db
+
             if git diff --cached --quiet; then
               echo "No database changes to commit."
             else
@@ -65,4 +62,3 @@ jobs:
           else
             echo "No database file yet — no jobs matched this run's filters."
           fi
-         
